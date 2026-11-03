@@ -2,9 +2,9 @@
 
 ## STUDIO-001 · Launch a tested calculator on an existing server
 
-**Status:** Launched and verified on November 3, 2026; learner contributions recorded and reviewed; PR and CI pending.
+**Status:** Launched and verified on November 3, 2026; learner contributions recorded and reviewed; PR CI passed.
 **Public calculator:** https://calc.trifffling.com
-**Next step:** Open the PR, record its actual CI, merge and close the issue.
+**Next step:** Merge PR #2 (closes issue #1), then run `python3 studio.py status` on `main`.
 **Instructor implementation:** [issue #9](https://github.com/kaw393939/373_hosting/issues/9).
 Create your own issue from the [lesson template](.github/ISSUE_TEMPLATE/studio-calculator.md).
 
@@ -31,12 +31,12 @@ reviewed, selected evidence; never commit credentials or raw server output.
 
 | Evidence | Actual result / link |
 |---|---|
-| Prepared Black/Pylint/pytest and real-image browser checks | Local `python3 studio.py check` passed on November 3, 2026: Black clean, Pylint clean, 91 unit/integration tests passed, 2 real-image Chromium E2E tests passed (local Docker). PR CI: pending |
+| Prepared Black/Pylint/pytest and real-image browser checks | Local `python3 studio.py check` passed on November 3, 2026: Black clean, Pylint clean, 91 unit/integration tests passed, 2 real-image Chromium E2E tests passed (local Docker). PR CI also passed, including the full E2E job: [run 41692632455](https://github.com/DylanJHrusko/my-server-studio/actions/runs/41692632455) (`studio`, `validate`, `integration-contract`) |
 | Hosted image/commit, trusted HTTPS, valid and rejected API cases | Passed in the new-launch report ([studio/evidence.json](studio/evidence.json), observed 2026-11-03T18:06:46Z): image digest and commit `4600202` match the release selection; trusted public HTTPS; 6×7 → 200/42; divide by zero → 400; numeric string → 422 |
 | Preservation of unrelated services | 5 existing containers unchanged (identity, state, published ports) per the launch report; existing sites also returned HTTPS 200 afterwards |
 | Own prediction, check interpretation, browser observation and keep/revise reason | [LEARNING.md](LEARNING.md): all four recorded in my words; assistance disclosed |
 | Accuracy review before publishing learner excerpts | Approved by me on November 3, 2026, before commit |
-| Actual PR, latest CI, merge and issue closure | Pending |
+| Actual PR, latest CI, merge and issue closure | [PR #2](https://github.com/DylanJHrusko/my-server-studio/pull/2) · CI passed ([run 41692632455](https://github.com/DylanJHrusko/my-server-studio/actions/runs/41692632455)) · merge closes [issue #1](https://github.com/DylanJHrusko/my-server-studio/issues/1) |
 
 Link the exported `studio/evidence.json`, actual CI and issue/PR when available.
 CI does not deploy this server. A fixture, green check, timestamp, closed issue
